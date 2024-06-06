@@ -1,0 +1,104 @@
+module Sprout
+{
+	imports
+	{
+		Base
+	}
+
+recipe Turn Latex into Rubber
+	{
+	TreeLatex,
+	BakingSoda,
+
+		keep Pot,
+		keep KitchenKnife,
+		keep BlowTorch=2,
+		keep WeldingMask,
+		
+		Result:LumpofRubber=10,
+		Time:200.0,
+	}
+recipe Grind Coffee Beans
+	{
+      CoffeeBeans=5,
+	keep MortarPestle/Grinder,
+
+        Result:Coffee2,
+        Time:20.0,
+	  Category:Cooking,
+	}
+recipe Make Tea bags
+	{
+      TeaLeaf=5,
+	keep MortarPestle/Grinder,
+	SheetPaper2,
+	Twine=1,
+
+        Result:Teabag2=2,
+        Time:20.0,
+	  Category:Cooking,
+	}
+recipe Make Drying Rack
+	{
+        Plank=2,
+	Nails=8,
+	Tarp=1,
+	keep Scissors,
+ 	keep Saw,
+	keep Hammer,
+
+        Result:DryingRack,
+        Time:100.0,
+        Sound: Sawing,
+	  Category:Farming,
+	}
+recipe Make Cask
+	{
+        Plank=8,
+	Nails=12,
+	SheetMetal=1,
+	
+	keep Hammer,
+        keep Saw,
+
+        Result:Cask,
+        Time:200.0,
+        Sound: Sawing,
+	Category:Farming,
+	}
+
+recipe Make Spindle
+	{
+        Plank=1,
+	Screws=2,
+	ScrapMetal=4,
+	
+	keep Hammer,
+        keep Saw,
+
+        Result:Spindle,
+        Time:200.0,
+        Sound: Sawing,
+	Category:Farming,
+	}
+
+recipe Spin Thread
+	{
+      Cotton=10,
+
+	keep Spindle,
+
+        Result:Thread=5,
+        Time:200.0,
+	  Category:Farming,
+	}
+recipe Convert Cotton
+	{
+      Cotton=10,
+
+        Result:CottonBalls=7,
+        Time:20.0,
+	  Category:Farming,
+	}
+
+}

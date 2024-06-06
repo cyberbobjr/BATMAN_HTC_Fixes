@@ -1,0 +1,15 @@
+Tooltip_FR = {
+    -- Infobulle de l'objet
+    Tooltip_item_Salted = "Ceci est un article de base.<br>Ajoutez-y de la viande et laissez-le cuire",
+    Tooltip_item_Smoked = "Il s'agit d'un article de base.<br>Ajoutez-y de la viande et laissez-la cuire",
+    Tooltip_item_SaltRock = "Peut être trouvé à l'extérieur avec la compétence de recherche 5 et plus.<br>Peut être transformé en sel.",
+    Tooltip_item_Bones = "Peut être récolté sur de gros animaux morts et transformé en colle",
+    Tooltip_item_Tallow = "Peut être utilisé comme graisse pour la cuisine ou transformé en bougies",
+    Tooltip_item_WoodenBarrel = "Peut être utilisé pour brasser de l'éthanol et du vinaigre",
+    Tooltip_item_BioGas = "Peut être utilisé pour raffiner le biogaz à partir de divers aliments.",
+    Tooltip_item_BioGasW = "Cela peut prendre un certain temps avant d'être prêt.<br>Si le gaz est éventé, c'est que tout fonctionne",
+    Tooltip_item_WBWorking = "Cela peut prendre un certain temps pour être prêt.<br>Si c'est éventé, c'est que tout fonctionne",
+    Tooltip_item_SweetBulp = "Peut être transformé en jus sucré ou séché près du feu de camp. Produit de la levure en tant que sous-produit. <br>Ne peut pas utiliser d'ingrédients toxiques",
+    Tooltip_item_YBulp = "Peut être transformé en levure en le piétinant.<br>Il n'est pas possible d'utiliser des ingrédients toxiques",
+    Tooltip_item_SS = "Peut être utilisé comme sucre ou simplement consommé comme un aliment normal. Ne s'abîme pas.",
+}

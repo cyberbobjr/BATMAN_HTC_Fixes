@@ -1,0 +1,5 @@
+ContextMenu_FR = {
+	ContextMenu_EvolvedRecipe_ESaltedMeat = "(Viande Salée)",
+	ContextMenu_EvolvedRecipe_ESmokedMeat = "(Viande fumée)",
+	ContextMenu_EvolvedRecipe_ESalami = "Salami",
+} 
