@@ -1,0 +1,8 @@
+IGUI_FR =
+{
+	IGUI_perks_Libations 			= "Maîtrise des Libations",
+	IGUI_perks_Brewing 				= "Brassage",
+	IGUI_CraftCategory_MoreBrews 	= "Brassage",
+	IGUI_ItemCat_MoreBrews 			= "Brassage",
+	IGUI_ItemCat_CraftBrewing 		= "Fabrication - Brassage",
+}

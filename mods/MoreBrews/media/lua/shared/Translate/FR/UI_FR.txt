@@ -1,0 +1,4 @@
+UI_FR = {
+    UI_trait_brewer     = "Brasseur",
+    UI_trait_brewerinfo = "Vous connaissez tout sur le brassage de la bière - confère +2 à la compétence de Brassage et des bonus dans la fabrication de bouteilles, canettes et capsules",
+}
