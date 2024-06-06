@@ -9,7 +9,7 @@ function GetPot_OnCreate(items, result, player)
 end
 
 function GetEmptyBarrel_OnCreate(items, result, player)
-    player:getInventory():AddItem("WoodenBarrel");
+    player:getInventory():AddItem("MoreBrews.EmptyBarrelDispenserLarge");
 end
 
 function MeatIsCookedAlready_OnTest(item)

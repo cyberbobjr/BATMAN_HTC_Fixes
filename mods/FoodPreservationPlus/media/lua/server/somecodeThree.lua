@@ -24,17 +24,17 @@ registerAsLoot("Base.SpoonMagazineBrewing", 0.1, "ClassroomShelves");
 registerAsLoot("Base.SpoonMagazineBrewing", 0.1, "ClassroomMisc");
 registerAsLoot("Base.SpoonMagazineBrewing", 0.5, "MagazineRackMixed");
 
-registerAsLoot("Base.WoodenBarrel", 2, "CrateFarming");
-registerAsLoot("Base.WoodenBarrel", 2, "GardenStoreMisc");
-registerAsLoot("Base.WoodenBarrel", 2, "GigamartFarming");
-registerAsLoot("Base.WoodenBarrel", 2, "ToolStoreFarming");
-registerAsLoot("Base.WoodenBarrel", 0.1, "GarageCarpentry");
-registerAsLoot("Base.WoodenBarrel", 0.1, "GarageMechanics");
-registerAsLoot("Base.WoodenBarrel", 0.1, "GarageMetalwork");
-registerAsLoot("Base.WoodenBarrel", 0.1, "GarageTools");
-registerAsLoot("Base.WoodenBarrel", 0.1, "StoreShelfMechanics");
-registerAsLoot("Base.WoodenBarrel", 0.1, "ToolStoreMetalwork");
-registerAsLoot("Base.WoodenBarrel", 2, "ToolStoreCarpentry");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 2, "CrateFarming");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 2, "GardenStoreMisc");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 2, "GigamartFarming");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 2, "ToolStoreFarming");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 0.1, "GarageCarpentry");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 0.1, "GarageMechanics");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 0.1, "GarageMetalwork");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 0.1, "GarageTools");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 0.1, "StoreShelfMechanics");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 0.1, "ToolStoreMetalwork");
+registerAsLoot("MoreBrews.EmptyBarrelDispenserLarge", 2, "ToolStoreCarpentry");
 
 registerAsLoot("Base.CanSealer", 2, "BakeryKitchenBaking");
 registerAsLoot("Base.CanSealer", 2, "DinerBackRoomCounter");

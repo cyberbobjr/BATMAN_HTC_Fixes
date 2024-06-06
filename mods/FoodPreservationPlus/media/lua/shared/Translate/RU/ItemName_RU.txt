@@ -35,7 +35,6 @@ ItemName_RU = {
 	ItemName_Base.SaltedMeat					= "Солёное мясо",
 	ItemName_Base.SmokedMeat					= "Копченое мясо",
 	ItemName_Base.SalamiHomemade				= "Домашнее салями",
-	ItemName_Base.SaltRock						= "Каменная соль",
 	ItemName_Base.Bones							= "Кости",
 	ItemName_Base.CrushedBones					= "Раздробленные кости",
 	ItemName_Base.CanSealer						= "Закаточная машинка",

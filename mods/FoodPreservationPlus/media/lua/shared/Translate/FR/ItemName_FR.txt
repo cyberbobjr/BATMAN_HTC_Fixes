@@ -35,7 +35,6 @@ ItemName_FR = {
     ItemName_Base.SaltedMeat = "Viande salée",
     ItemName_Base.SmokedMeat = "Viande fumée",
     ItemName_Base.SalamiHomemade = "Salami maison",
-    ItemName_Base.SaltRock = "Sel de roche",
     ItemName_Base.Bones = "Os",
     ItemName_Base.CrushedBones = "Os broyés",
     ItemName_Base.CanSealer = "Sertisseuse de boîtes",

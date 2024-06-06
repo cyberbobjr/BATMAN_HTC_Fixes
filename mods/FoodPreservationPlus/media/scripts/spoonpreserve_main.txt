@@ -276,33 +276,9 @@ module Base
 		RemoveNegativeEffectOnCooked = TRUE,
 	}
 	
-	/****************************** SALT AND BONES ******************************/
+	/****************************** BONES ******************************/
 	
-	item SaltRock 
-	{
-		DisplayCategory = Material,
-        Weight	=	0.2,
-        Type	=	Normal,
-        DisplayName	=	Salt Rock,
-        Icon	=	SaltRock,
-        WorldStaticModel = Stone,
-		Tooltip = Tooltip_item_SaltRock,
-	}
-
-	recipe Stomp Salt Rocks to Salt 
-	{
-		SaltRock=10,
-		keep RippedSheets=5,
-		keep [Recipe.GetItemTypes.Hammer]/Log/MetalBar/HandAxe/Crowbar/Axe/WoodAxe,
-		
-		Result:Salt,
-		NeedToBeLearn:true,
-		SkillRequired:Cooking=2,
-		OnGiveXP:Recipe.OnGiveXP.Cooking10,
-		Time:500,
-	}
-	
-	item Bones 
+	item Bones
 	{
 		DisplayCategory = Material,
         Weight	=	1,
@@ -705,7 +681,7 @@ module Base
         Water=3,
         Salt;1,
 		keep [Recipe.GetItemTypes.SharpKnife],
-		keep WoodenBarrel/Pot/BucketEmpty,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty,
 		keep CanSealer,
 
         Result:HomemadeBerryNew,
@@ -756,7 +732,7 @@ module Base
         Water=3,
         Salt;1,
 		keep [Recipe.GetItemTypes.SharpKnife],
-		keep WoodenBarrel/Pot/BucketEmpty,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty,
 		keep CanSealer,
 
         Result:HomemadeMushroomsNew,
@@ -1242,37 +1218,23 @@ module Base
         WorldStaticModel = Soap,
     }
 	
-	/****************************** VODKA AND VINEGAR ******************************/
-	
-	recipe Pour away stuff from barrel
-    {
-        VodkaBrewWorking/VodkaBrewReady/VinegarBrewWorking/VinegarBrewReady,
-		
-        Result: WoodenBarrel,
-        Time: 60.0,
-        Category: Cooking,
-    }
-	
-	
-	recipe Make Wooden Barrel
-    {
-		LeatherStrips=20,
-		Wire=10,
-		Plank=10,
-		keep [Recipe.GetItemTypes.Hammer],
+	/****************************** BREAK BARREL ******************************/
 
-        Result:WoodenBarrel,
-        Time:500.0,
-        Category:Carpentry,
-		NeedToBeLearn:true,
-		SkillRequired:Woodwork=3,
-        OnGiveXP:Recipe.OnGiveXP.WoodWork5,
-		CanBeDoneFromFloor      : TRUE,
-    }
-	
 	recipe Break Wooden Barrel
     {
-		WoodenBarrel/VodkaBrewWorking/VodkaBrewReady,
+		MoreBrews.EmptyBarrelDispenserLarge/MoreBrews.EmptyBarrelAging,
+		keep [Recipe.GetItemTypes.Hammer],
+
+        Result:Plank=2,
+        Time:150.0,
+        Category:Carpentry,
+		OnCreate: GetSmashedBarrel_OnCreate,
+		CanBeDoneFromFloor      : TRUE,
+    }
+
+	recipe Break Wooden Barrel
+    {
+		MoreBrews.EmptyBarrelDispenserSmall,
 		keep [Recipe.GetItemTypes.Hammer],
 
         Result:Plank,
@@ -1281,22 +1243,13 @@ module Base
 		OnCreate: GetSmashedBarrel_OnCreate,
 		CanBeDoneFromFloor      : TRUE,
     }
-	
-	item WoodenBarrel
-	{
-		DisplayCategory = Material,
-		Type			= Normal,
-		Icon			= WoodenBarrel,
-		Weight		  	= 15,
-		DisplayName		= Wooden Barrel(Empty),
-		WorldStaticModel = WoodenBarrel,
-		Tooltip = Tooltip_item_WoodenBarrel,
-	}
-	
+
+  	/****************************** ETHANOL / VODKA ******************************/
+
 	recipe Make Ethanol Wort
     {	
 		Potato/Corn;10,
-		keep WoodenBarrel/Pot/BucketEmpty/Saucepan,
+		keep MoreBrews.EmptyBarrelDispenserSmall/Pot/BucketEmpty/Saucepan,
 		keep Log,
 
         Result:SWortEthanol,
@@ -1328,9 +1281,9 @@ module Base
 	
 	recipe Make Ethanol Brew
     {
-        WoodenBarrel,
+        MoreBrews.EmptyBarrelDispenserLarge,
 		SWortEthanol;100,
-		Yeast=5,
+		MoreBrews.PotatoYeastStarter=5,
 		Water=25,
 		keep Saucepan/Pot/BucketEmpty,
 
@@ -1356,6 +1309,7 @@ module Base
 		DaysTotallyRotten 	=	 	15,
 		WorldStaticModel = WoodenBarrel,
 		Tooltip = Tooltip_item_WBWorking,
+		Tags                = FullLargeBarrel,
 	}
 	
 	item VodkaBrewReady
@@ -1366,6 +1320,7 @@ module Base
 		Weight		  	= 25,
 		DisplayName		= Ethanol Brew (Brew Ready),
 		WorldStaticModel = WoodenBarrel,
+		Tags                = FullLargeBarrel,
 	}
 	
 	recipe Open Ethanol Brew Barrel
@@ -1414,7 +1369,6 @@ module Base
 		Type = Food,
 		Weight = 1,
 		Icon = WaterBottle_Full,
-		/*EvolvedRecipe = Beverage:4;Beverage2:4;Soup:4;Stew:4;PastaPot:4;PastaPan:4;WineInGlass:4,*/
 		EvolvedRecipe = Beverage:4;Beverage2:4;WineInGlass:4;PastaPot:4;PastaPan:4,
 		FoodType = Liquor,
 		AlcoholPower = 6,
@@ -1440,7 +1394,7 @@ module Base
 	recipe Make Vinegar Wort
     {	
 		Potato/Carrots/Cabbage/Strewberrie/Corn/Apple;10,
-		keep WoodenBarrel/Pot/BucketEmpty/Saucepan,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty/Saucepan,
 		keep Log,
 
         Result:SWortVinegar,
@@ -1500,6 +1454,7 @@ module Base
 		DaysTotallyRotten 	=	 	10,
 		WorldStaticModel = WoodenBarrel,
 		Tooltip = Tooltip_item_WBWorking,
+		Tags                = FullLargeBarrel,
 	}
 	
 	item VinegarBrewReady
@@ -1510,6 +1465,7 @@ module Base
 		Weight		  	= 25,
 		DisplayName		= Vinegar Brew (Brew Ready),
 		WorldStaticModel = WoodenBarrel,
+		Tags                = FullLargeBarrel,
 	}
 	
 	recipe Open Vinegar Brew Barrel
@@ -1541,7 +1497,7 @@ module Base
     {	
 		Carrots/Corn/Strewberrie/Banana/Orange/Apple/Grapes/Pear/Cherry/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5/BerryBlack/BerryBlue;10,
 		keep [Recipe.GetItemTypes.SharpKnife],
-		keep WoodenBarrel/Pot/BucketEmpty,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty,
 
         Result:SJBulp,
         Time:25.0,
@@ -1555,7 +1511,7 @@ module Base
     {	
 		SJBulp;150,       
 		WaterBottleEmpty/PopBottleEmpty,
-		keep WoodenBarrel/Pot/BucketEmpty,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty,
 		keep Log,
 
         Result:SweetJuice,
@@ -1572,7 +1528,7 @@ module Base
     {	
 		MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7;10,
 		keep [Recipe.GetItemTypes.SharpKnife],
-		keep WoodenBarrel/Pot/BucketEmpty,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty,
 
         Result:YBulp,
         Time:25.0,
@@ -1585,7 +1541,7 @@ module Base
 	recipe Stomp Mushrooms to Yeast
     {	
 		YBulp;150,
-		keep WoodenBarrel/Pot/BucketEmpty,
+		keep MoreBrews.EmptyBarrelDispenserLarge/Pot/BucketEmpty,
 		keep Log,
 
         Result:Yeast,

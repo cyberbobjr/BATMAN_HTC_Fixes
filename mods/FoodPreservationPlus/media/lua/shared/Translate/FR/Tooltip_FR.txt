@@ -2,7 +2,6 @@ Tooltip_FR = {
     -- Infobulle de l'objet
     Tooltip_item_Salted = "Ceci est un article de base.<br>Ajoutez-y de la viande et laissez-le cuire",
     Tooltip_item_Smoked = "Il s'agit d'un article de base.<br>Ajoutez-y de la viande et laissez-la cuire",
-    Tooltip_item_SaltRock = "Peut être trouvé à l'extérieur avec la compétence de recherche 5 et plus.<br>Peut être transformé en sel.",
     Tooltip_item_Bones = "Peut être récolté sur de gros animaux morts et transformé en colle",
     Tooltip_item_Tallow = "Peut être utilisé comme graisse pour la cuisine ou transformé en bougies",
     Tooltip_item_WoodenBarrel = "Peut être utilisé pour brasser de l'éthanol et du vinaigre",

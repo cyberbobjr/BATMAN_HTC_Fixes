@@ -2,7 +2,6 @@ Tooltip_EN = {
 	-- Item tooltip
 	Tooltip_item_Salted = "This is a base items.<br>Add more meat to it and then let it cook.",
 	Tooltip_item_Smoked = "This is a base items.<br>Add more meat to it and then let it cook.",
-	Tooltip_item_SaltRock = "Can be found outside with foraging skill 5 and up.<br>Can be stomped into salt.",
 	Tooltip_item_Bones = "Can be harvested from big dead animals and made into glue.",
 	Tooltip_item_Tallow = "Can be used as fat on cooking or made into candles.",
 	Tooltip_item_WoodenBarrel = "Can be used to brew ethanol and vinegar.",
